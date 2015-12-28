@@ -36,16 +36,10 @@ def main():
 
 # Parse comments
 def get_comment():
-    ##TODO FIX THIS
     consumer_key = config_section_map("tumblr")['consumer_key']
     consumer_secret = config_section_map("tumblr")['consumer_secret']
     oauth_token = config_section_map("tumblr")['oauth_token']
     oauth_secret = config_section_map("tumblr")['oauth_secret']
-
-    print consumer_key
-    print consumer_secret
-    print oauth_token
-    print oauth_secret
 
     client = pytumblr.TumblrRestClient(
         consumer_key,
@@ -53,18 +47,13 @@ def get_comment():
         oauth_token,
         oauth_secret)
 
-    print client.info()
-
-
-
     try:
-        print client.info()
         page = urllib2.urlopen('http://www.pornhub.com/random').read()
         soup = BeautifulSoup(page, "lxml")
 
         if len(soup.select("div.commentMessage")) > 0:
             for s in soup.select("div.commentMessage")[0].stripped_strings:
-                if len(s) > 10:  # I'm so sorry
+                if len(s) > 10 and s != "[[commentMessage]]":  # I'm so sorry
 
                     image = soup.find("meta", {"name": "twitter:image"})['content']
                     url = soup.find("meta", {"name": "twitter:url"})['content']
