@@ -6,6 +6,11 @@ Don't judge, there are many mind blowing comments that you'll see.
 ## You need to have BeautifulSoup installed to use it:
 
 	$ pip install bs4
+	
+and sometimes you'll have to install parser libs
+
+    $ pip install --upgrade lxml
+    $ pip install cssselect
 
 ## And you run it with: 
 
