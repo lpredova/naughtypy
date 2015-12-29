@@ -1,7 +1,15 @@
 # naughtypy
 
-naughtypy is a little ugly program drunk written in python that gets a random comment from a random pornhub video. Also, I've made a tumblr bot that posts these comments at http://porn--quotes.tumblr.com/
+naughtypy is a little ugly program drunk written in python that gets a random comment from a random pornhub video. 
+Also, I've made a tumblr bot and twitter that posts these comments at:
+
+[https://twitter.com/DailyRandomPorn]()
+[http://dailyrandomporn.tumblr.com/]()
+
+
 Don't judge, there are many mind blowing comments that you'll see. 
+
+Made by **Matej**, updated by **Lovro**
 
 ## You need to have BeautifulSoup installed to use it:
 
@@ -16,7 +24,9 @@ and sometimes you'll have to install parser libs
 
 	$ python naughtypy.py
 
-If you want just to get comments without posting them to tumblr, just set the bot variable to False and run it.
+
 
 ## Known bugs:
-* sometimes it just crashes (dooh, I was drunk)
+* sometimes it just crashes
+
+**2016**
